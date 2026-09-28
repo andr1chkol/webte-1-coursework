@@ -1,10 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pracovné prostredie | Andrii Lazaresku</title>
+    <meta name="description" content="Interaktívna prehliadka pracovného prostredia Andrii Lazaresku.">
+
+    <meta property="og:title" content="Pracovné prostredie | Andrii Lazaresku">
+    <meta property="og:description" content="Miesto, kde študujem a pracujem.">
+    <meta property="og:image" content="../img/workspace.jpg">
+
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-$END$
+
+<a class="skip-link" href="#main-content">
+    Preskočiť na obsah
+</a>
+
+<header class="site-header">
+    <div class="site-header__content">
+        <a class="brand" href="../index.html" aria-label="Domovská stránka">
+            <span class="brand__monogram" aria-hidden="true">LA</span>
+            <span class="brand__text">
+                <span class="brand__name"><strong>Andrii Lazaresku</strong></span>
+                <span class="brand__tagline">Študent aplikovanej informatiky so záujmom o backend.</span>
+            </span>
+        </a>
+    </div>
+</header>
+
+<nav class="site-navigation" aria-label="Hlavná navigácia">
+    <button class="site-navigation__toggle" type="button" aria-controls="main-menu" aria-expanded="false">MENU</button>
+    <ul class="site-navigation__list" id="main-menu">
+        <li><a class="site-navigation__link" href="../index.html">Profil</a></li>
+        <li><a class="site-navigation__link" href="cv.html">Životopis</a></li>
+        <li><a class="site-navigation__link" href="workspace.html" aria-current="page">Pracovné prostredie</a></li>
+        <li><a class="site-navigation__link" href="schedule.html">Rozvrh</a></li>
+        <li><a class="site-navigation__link" href="map.html">Mapa</a></li>
+    </ul>
+</nav>
+
+<main class="site-main" id="main-content">
+    <h1>Ako pracujem</h1>
+    <section class="workspace" aria-labelledby="workspace-title">
+        <div class="workspace__intro">
+            <div>
+                <h2 id="workspace-title">Moje pracovné prostredie</h2>
+                <p>Tu študujem, programujem a pripravujem svoje projekty.
+                    Vyberte označený bod a pozrite si, na čo jednotlivé časti používam.
+                </p>
+            </div>
+
+            <p class="workspace__hint">Kliknite na očíslovaný bod</p>
+        </div>
+
+        <div class="workspace__interactive">
+            <div class="workspace__stage">
+                <img class="workspace__image"
+                     src="../img/workspace.jpg"
+                     width="5712"
+                     height="4284"
+                     alt="Pracovný stôl s notebookom, poznámkami, slúchadlami a knihami">
+
+                <input class="workspace__control workspace__control--one" type="radio" name="workspace-hotspot"
+                       id="hotspot-one" checked>
+                <label class="workspace__hotspot workspace__hotspot--one" for="hotspot-one">
+                    <span>1</span>
+                    <span class="visually-hidden">Notebook</span>
+                </label>
+
+                <input class="workspace__control workspace__control--two" type="radio" name="workspace-hotspot"
+                       id="hotspot-two">
+                <label class="workspace__hotspot workspace__hotspot--two" for="hotspot-two">
+                    <span>2</span>
+                    <span class="visually-hidden">Myš</span>
+                </label>
+
+                <input class="workspace__control workspace__control--three" type="radio" name="workspace-hotspot"
+                       id="hotspot-three">
+                <label class="workspace__hotspot workspace__hotspot--three" for="hotspot-three">
+                    <span>3</span>
+                    <span class="visually-hidden">Poznámky</span>
+                </label>
+
+                <input class="workspace__control workspace__control--four" type="radio" name="workspace-hotspot"
+                       id="hotspot-four">
+                <label class="workspace__hotspot workspace__hotspot--four" for="hotspot-four">
+                    <span>4</span>
+                    <span class="visually-hidden">Slúchadlá</span>
+                </label>
+
+                <input class="workspace__control workspace__control--five" type="radio" name="workspace-hotspot"
+                       id="hotspot-five">
+                <label class="workspace__hotspot workspace__hotspot--five" for="hotspot-five">
+                    <span>5</span>
+                    <span class="visually-hidden">Odborné knihy</span>
+                </label>
+
+                <input class="workspace__close-control visually-hidden" type="radio" name="workspace-hotspot"
+                       id="hotspot-none">
+            </div>
+
+            <article class="workspace__panel workspace__panel--one">
+                <label class="workspace__close" for="hotspot-none">× <span>Zavrieť</span></label>
+                <span class="workspace__number">01</span>
+                <h2>Notebook</h2>
+                <p>
+                    Toto je môj MacBook. Používam ho na programovanie školských zadaní, sledovanie videí a štúdium.
+                </p>
+            </article>
+
+            <article class="workspace__panel workspace__panel--two">
+                <label class="workspace__close" for="hotspot-none">× <span>Zavrieť</span></label>
+                <span class="workspace__number">02</span>
+                <h2>Vývojové prostredie</h2>
+                <p>
+                    Toto je moja myš. Používam ju pri práci s dizajnom alebo pri hraní hier.
+                </p>
+            </article>
+
+            <article class="workspace__panel workspace__panel--three">
+                <label class="workspace__close" for="hotspot-none">× <span>Zavrieť</span></label>
+                <span class="workspace__number">03</span>
+                <h2>Poznámky</h2>
+                <p>
+                    Toto sú moje poznámky z predmetu Lineárna algebra 2.
+                </p></article>
+
+            <article class="workspace__panel workspace__panel--four">
+                <label class="workspace__close" for="hotspot-none">× <span>Zavrieť</span></label>
+                <span class="workspace__number">04</span>
+                <h2>Slúchadlá</h2>
+                <p>
+                    Toto sú moje slúchadlá. Pomáhajú mi sústrediť sa alebo relaxovať.
+                </p>
+            </article>
+            <article class="workspace__panel workspace__panel--five">
+                <label class="workspace__close" for="hotspot-none">× <span>Zavrieť</span></label>
+                <span class="workspace__number">05</span>
+                <h2>Kniha</h2>
+                <p>
+                    Toto je kniha o Jave, ktorú práve čítam.
+                </p>
+            </article>
+            <article class="workspace__panel workspace__panel--empty">
+                <h2>Vyberte miesto</h2>
+                <p>Kliknite na očíslovaný bod na fotografii a zobrazia sa ďalšie informácie.</p>
+            </article>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="site-footer__content">
+        <address class="contact">
+            <a href="mailto:xlazaresku@stuba.sk">xlazaresku@stuba.sk</a>
+            <a href="tel:+421952209531">+421 952 209 531</a>
+        </address>
+        <p class="footer-sources">
+            Zdroje: fotografia pracovného prostredia – vlastný archív ·
+            <a href="https://fonts.google.com/specimen/Inter">Inter</a> ·
+            <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a>
+        </p>
+        <p>© 2026 Andrii Lazaresku</p></div>
+</footer>
 </body>
 </html>

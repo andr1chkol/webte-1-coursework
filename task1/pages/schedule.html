@@ -1,10 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rozvrh | Andrii Lazaresku</title>
+    <meta name="description" content="Týždenný rozvrh a dostupnosť Andrii Lazaresku.">
+
+    <meta property="og:title" content="Rozvrh | Andrii Lazaresku">
+    <meta property="og:description" content="Týždenný rozvrh predmetov na FEI STU.">
+    <meta property="og:image" content="../img/me.jpg">
+
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-$END$
+
+    <a class="skip-link" href="#main-content">
+        Preskočiť na obsah
+    </a>
+
+    <header class="site-header">
+        <div class="site-header__content">
+            <a class="brand" href="../index.html" aria-label="Domovská stránka">
+                <span class="brand__monogram" aria-hidden="true">LA</span>
+                <span class="brand__text">
+                    <span class="brand__name"><strong>Andrii Lazaresku</strong></span>
+                    <span class="brand__tagline">Študent aplikovanej informatiky so záujmom o backend.</span>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Hlavná navigácia">
+        <button class="site-navigation__toggle" type="button" aria-controls="main-menu" aria-expanded="false">MENU</button>
+        <ul class="site-navigation__list" id="main-menu">
+            <li><a class="site-navigation__link" href="../index.html">Profil</a></li>
+            <li><a class="site-navigation__link" href="cv.html">Životopis</a></li>
+            <li><a class="site-navigation__link" href="workspace.html">Pracovné prostredie</a></li>
+            <li><a class="site-navigation__link" href="schedule.html" aria-current="page">Rozvrh</a></li>
+            <li><a class="site-navigation__link" href="map.html">Mapa</a></li>
+        </ul>
+    </nav>
+
+    <main class="site-main" id="main-content">
+        <h1>Kedy ma zastihnete</h1>
+
+        <section class="schedule" aria-labelledby="schedule-title">
+            <div class="schedule__heading">
+                <div>
+                    <h2 id="schedule-title">Môj týždenný rozvrh</h2>
+                    <p id="schedule-status" class="schedule__status" aria-live="polite"></p>
+                </div>
+                <div class="schedule__filters" role="group" aria-label="Filtrovanie rozvrhu">
+                    <button class="schedule__filter" type="button" data-filter="all" aria-pressed="true">Všetko</button>
+                    <button class="schedule__filter" type="button" data-filter="lecture" aria-pressed="false">Prednášky</button>
+                    <button class="schedule__filter" type="button" data-filter="exercise" aria-pressed="false">Cvičenia</button>
+                </div>
+            </div>
+
+            <p id="schedule-filter-status" class="schedule__filter-status" aria-live="polite" hidden></p>
+
+            <div class="schedule__table-wrapper">
+                <table class="schedule__table">
+                    <caption>Rozvrh vyučovania od 7:00 do 21:00</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Deň</th>
+                            <th scope="col">07:00</th>
+                            <th scope="col">08:00</th>
+                            <th scope="col">09:00</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">12:00</th>
+                            <th scope="col">13:00</th>
+                            <th scope="col">14:00</th>
+                            <th scope="col">15:00</th>
+                            <th scope="col">16:00</th>
+                            <th scope="col">17:00</th>
+                            <th scope="col">18:00</th>
+                            <th scope="col">19:00</th>
+                            <th scope="col">20:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Pondelok</th>
+                            <td class="schedule__free" colspan="2"></td>
+                            <td class="lesson lesson--lecture" colspan="2"
+                                data-type="lecture" data-day="1" data-start="09:00" data-end="10:50">
+                                <strong>Operačné systémy</strong>
+                                <span>Prednáška · CPU-A</span>
+                            </td>
+                            <td class="schedule__free" colspan="2"></td>
+                            <td class="lesson lesson--lecture" colspan="2"
+                                data-type="lecture" data-day="1" data-start="13:00" data-end="14:50">
+                                <strong>Webové technológie 1</strong>
+                                <span>Prednáška · C137</span>
+                            </td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="1" data-start="15:00" data-end="16:50">
+                                <strong>Lineárna algebra 2</strong>
+                                <span>Cvičenie · CD300</span>
+                            </td>
+                            <td class="schedule__free" colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Utorok</th>
+                            <td class="schedule__free"></td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="2" data-start="08:00" data-end="09:50">
+                                <strong>Analýza a zložitosť algoritmov</strong>
+                                <span>Cvičenie · DE300</span>
+                            </td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="2" data-start="10:00" data-end="11:50">
+                                <strong>Webové technológie 1</strong>
+                                <span>Cvičenie · CD150</span>
+                            </td>
+                            <td class="schedule__free" colspan="3"></td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="2" data-start="15:00" data-end="16:50">
+                                <strong>Softvérové inžinierstvo</strong><span>Cvičenie · CD300</span>
+                            </td>
+                            <td class="lesson lesson--lecture lesson--compact"
+                                data-type="lecture" data-day="2" data-start="17:00" data-end="17:50"
+                                data-subject="Softvérové inžinierstvo" aria-label="Softvérové inžinierstvo, prednáška, CD300">
+                                <strong>
+                                    <abbr title="Softvérové inžinierstvo">Softvérové inž.</abbr>
+                                </strong>
+                                <span>Prednáška<br>CD300</span>
+                            </td>
+                            <td class="schedule__free" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Streda</th>
+                            <td class="schedule__free"></td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="3" data-start="08:00" data-end="09:50">
+                                <strong>Operačné systémy</strong><span>Cvičenie · CD300</span></td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="3" data-start="10:00" data-end="11:50">
+                                <strong>Analýza a zložitosť algoritmov</strong>
+                                <span>Cvičenie · BC150</span>
+                            </td>
+                            <td class="schedule__free"></td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="exercise" data-day="3" data-start="13:00" data-end="14:50">
+                                <strong>Webové technológie 1</strong>
+                                <span>Cvičenie · CD150</span>
+                            </td>
+                            <td class="lesson lesson--lecture" colspan="2"
+                                data-type="lecture" data-day="3" data-start="15:00" data-end="16:50">
+                                <strong>Lineárna algebra 2</strong>
+                                <span>Prednáška · C329</span>
+                            </td>
+                            <td class="schedule__free" colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Štvrtok</th>
+                            <td class="schedule__free" colspan="2"></td>
+                            <td class="lesson lesson--exercise" colspan="2"
+                                data-type="sport" data-day="4" data-start="09:00" data-end="10:50">
+                                <strong>Telesná kultúra</strong>
+                                <span>Cvičenie · POS</span>
+                            </td>
+                            <td class="lesson lesson--lecture lesson--compact"
+                                data-type="lecture" data-day="4" data-start="11:00" data-end="11:50"
+                                data-subject="Softvérové inžinierstvo" aria-label="Softvérové inžinierstvo, prednáška, C137">
+                                <strong>
+                                    <abbr title="Softvérové inžinierstvo">Softvérové inž.</abbr>
+                                </strong>
+                                <span>Prednáška<br>C137</span>
+                            </td>
+                            <td class="schedule__free" colspan="9"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Piatok</th>
+                            <td class="schedule__free" colspan="14">Bez vyučovania</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="semester-progress">
+                <div class="semester-progress__heading">
+                    <h2>Priebeh semestra</h2>
+                    <output id="semester-progress-label" for="semester-progress">0 %</output>
+                </div>
+                <progress id="semester-progress" max="100" value="0">0 %</progress>
+                <p>Semester: 14. 9. 2026 – 14. 12. 2026</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__content">
+            <address class="contact">
+                <a href="mailto:xlazaresku@stuba.sk">xlazaresku@stuba.sk</a>
+                <a href="tel:+421952209531">+421 952 209 531</a>
+            </address>
+            <p class="footer-sources">Zdroje: <a href="https://fonts.google.com/specimen/Inter">Inter</a> ·
+                <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a>
+            </p>
+            <p>© 2026 Andrii Lazaresku</p>
+        </div>
+    </footer>
 </body>
 </html>

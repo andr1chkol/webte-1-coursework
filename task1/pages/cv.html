@@ -1,10 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Životopis | Andrii Lazaresku</title>
+    <meta name="description" content="Vzdelanie, technické znalosti a jazykové zručnosti">
+    <meta property="og:title" content="Životopis | Andrii Lazaresku">
+    <meta property="og:description" content="Vzdelanie, technické znalosti a jazykové zručnosti">
+    <meta property="og:image" content="../img/me.jpg">
+
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-$END$
+
+<a class="skip-link" href="#main-content">
+    Preskočiť na obsah
+</a>
+
+<header class="site-header">
+    <div class="site-header__content">
+        <a class="brand" href="../index.html" aria-label="Domovská stránka">
+            <span class="brand__monogram" aria-hidden="true">LA</span>
+            <span class="brand__text">
+                <span class="brand__name"><strong>Andrii Lazaresku</strong></span>
+                <span class="brand__tagline">Študent aplikovanej informatiky so záujmom o backend.</span>
+            </span>
+        </a>
+    </div>
+</header>
+<nav class="site-navigation" aria-label="Hlavná navigácia">
+    <button class="site-navigation__toggle" type="button" aria-controls="main-menu" aria-expanded="false">MENU</button>
+    <ul class="site-navigation__list" id="main-menu">
+        <li>
+            <a class="site-navigation__link" href="../index.html">Profil</a>
+        </li>
+        <li>
+            <a class="site-navigation__link" href="cv.html" aria-current="page">Životopis</a>
+        </li>
+        <li>
+            <a class="site-navigation__link" href="workspace.html">Pracovné prostredie</a>
+        </li>
+        <li>
+            <a class="site-navigation__link" href="schedule.html">Rozvrh</a>
+        </li>
+        <li>
+            <a class="site-navigation__link" href="map.html">Mapa</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="site-main" id="main-content">
+    <h1>Môj životopis</h1>
+    <article class="resume">
+        <h2 class="visually-hidden">Životopis Andriiho Lazaresku</h2>
+        <aside class="resume__sidebar">
+            <img class="resume__photo"
+            src="../img/me.jpg"
+            width="960"
+            height="1280"
+            loading="lazy"
+            alt="Portrét Andrii Lazaresku">
+
+            <section class="resume__contact">
+                <h2>Kontakt</h2>
+                <address>
+                    <p><strong>E-mail:</strong><br><a href="mailto:xlazaresku@stuba.sk">xlazaresku@stuba.sk</a></p>
+                    <p><strong>Telefón:</strong><br><a href="tel:+421952209531">+421 952 209 531</a></p>
+                    <p><strong>Bydlisko:</strong><br>Bratislava, Slovensko</p>
+                </address>
+            </section>
+
+        </aside>
+        <div class="resume__content">
+            <section>
+                <h2>Profil</h2>
+                <p>
+                    Som študentom aplikovanej informatiky na FEI STU.
+                    Zaujímam sa najmä o backendový vývoj, programovanie
+                    v jazyku Java a prácu s databázami.
+                </p>
+
+                <h2>Vzdelanie</h2>
+                <h3>
+                    Slovenská technická univerzita v Bratislave
+                </h3>
+                <p>Fakulta elektrotechniky a informatiky</p>
+                <p>Aplikovaná informatika, bakalárske štúdium</p>
+                <p>
+                    <time datetime="2024">2024</time> – súčasnosť
+                </p>
+            </section>
+
+            <section>
+                <h2>Technické zručnosti</h2>
+                <ul class="resume__skills">
+                    <li>
+                        <span>Java:</span>
+                        <strong>Pokročilá úroveň</strong>
+                    </li>
+
+                    <li>
+                        <span>Spring Boot:</span>
+                        <strong>Stredne pokročilá úroveň</strong>
+                    </li>
+
+                    <li>
+                        <span>SQL:</span>
+                        <strong>Stredne pokročilá úroveň</strong>
+                    </li>
+
+                    <li>
+                        <span>Git a GitHub:</span>
+                        <strong>Stredne pokročilá úroveň</strong>
+                    </li>
+
+                    <li>
+                        <span>HTML a CSS:</span>
+                        <strong>Základná úroveň</strong>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Jazykové znalosti</h2>
+                <ul class="resume__list">
+                    <li>Ukrajinčina - materinský jazyk</li>
+                    <li>Angličtina - pokročilá úroveň</li>
+                    <li>Slovenčina - stredne pokročilá úroveň</li>
+                    <li>Rumunčina - pokročilá úroveň</li>
+                </ul>
+            </section>
+        </div>
+    </article>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__content">
+        <address class="contact">
+            <a href="mailto:xlazaresku@stuba.sk">
+                xlazaresku@stuba.sk
+            </a>
+
+            <a href="tel:+421952209531">
+                +421 952 209 531
+            </a>
+        </address>
+        <p class="footer-sources">Zdroje: fotografia – vlastný archív ·
+            <a href="https://fonts.google.com/specimen/Inter">Inter</a> ·
+            <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a>
+        </p>
+        <p>© 2026 Andrii Lazaresku</p>
+    </div>
+</footer>
 </body>
 </html>

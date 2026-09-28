@@ -1,10 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil | Andrii Lazaresku</title>
+    <meta name="description" content="Osobný profil študenta aplikovanej informatiky.">
+
+    <meta property="og:title" content="Profil | Andrii Lazaresku">
+    <meta property="og:description" content="Osobný profil študenta aplikovanej informatiky.">
+    <meta property="og:image" content="img/me.jpg">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-$END$
+
+<a class="skip-link" href="#main-content">
+    Preskočiť na obsah
+</a>
+
+<header class="site-header">
+    <div class="site-header__content">
+        <a class="brand" href="index.html" aria-label="Domovská stránka">
+            <span class="brand__monogram" aria-hidden="true">LA</span>
+            <span class="brand__text">
+                <span class="brand__name"><strong>Andrii Lazaresku</strong></span>
+                <span class="brand__tagline">Študent aplikovanej informatiky so záujmom o backend.</span>
+            </span>
+        </a>
+    </div>
+</header>
+<nav class="site-navigation" aria-label="Hlavná navigácia">
+    <button class="site-navigation__toggle" type="button" aria-controls="main-menu" aria-expanded="false">MENU</button>
+    <ul class="site-navigation__list" id="main-menu">
+        <li><a class="site-navigation__link" href="index.html" aria-current="page">Profil</a></li>
+        <li><a class="site-navigation__link" href="pages/cv.html">Životopis</a></li>
+        <li><a class="site-navigation__link" href="pages/workspace.html">Pracovné prostredie</a></li>
+        <li><a class="site-navigation__link" href="pages/schedule.html">Rozvrh</a></li>
+        <li><a class="site-navigation__link" href="pages/map.html">Mapa</a></li>
+    </ul>
+</nav>
+
+<main class="site-main" id="main-content">
+    <h1>Kto som</h1>
+    <section class="profile">
+        <img class="profile__photo"
+             src="img/me.jpg"
+             width="960"
+             height="1280"
+             loading="lazy"
+             alt="Osobné foto Andrii Lazaresku">
+
+        <div class="profile__content">
+            <h2>O mne</h2>
+            <p>
+                Volám sa Andrii Lazaresku. Mám 19 rokov a pochádzam z Ukrajiny.
+                Momentálne študujem v treťom ročníku odboru aplikovaná informatika na FEI STU.
+                Najviac ma baví rozvíjať sa, učiť sa nové veci. Zaujímam sa o backendový vývoj v jazyku Java,
+                prácu so Spring Bootom a databázami.
+            </p>
+
+            <h2>Moje zručnosti</h2>
+            <ul class="skills">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>SQL</li>
+                <li>Git/GitHub</li>
+                <li>Backendový vývoj</li>
+            </ul>
+
+            <h2>Moje záujmy</h2>
+            <p>
+                Vo voľnom čase chodím do posilňovne, čítam knihy, venujem sa osobnému rozvoju a rád cestujem.
+                Medzi moje ďalšie záujmy patria futbal a Formula 1.
+            </p>
+        </div>
+    </section>
+
+    <aside class="quote">
+        <blockquote lang="en">
+            <p>“Simply lovely.”</p>
+            <footer>
+                - <cite> Max Verstappen</cite>
+            </footer>
+        </blockquote>
+    </aside>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__content">
+        <address class="contact">
+            <a href="mailto:xlazaresku@stuba.sk">
+                xlazaresku@stuba.sk
+            </a>
+
+            <a href="tel:+421952209531">
+                +421 952 209 531
+            </a>
+        </address>
+        <p class="footer-sources">Zdroje: fotografia – vlastný archív ·
+            <a href="https://fonts.google.com/specimen/Inter">Inter</a> ·
+            <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a>
+        </p>
+        <p>© 2026 Andrii Lazaresku</p>
+    </div>
+
+</footer>
 </body>
 </html>
