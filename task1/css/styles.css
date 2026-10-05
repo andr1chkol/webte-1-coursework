@@ -33,6 +33,7 @@
 
     --color-border: #d6d6d6;
     --color-on-dark: #ffffff;
+    --color-shadow: rgba(0, 0, 0, 0.35);
 
     --content-width: 84rem;
     --radius: 0.5rem;
@@ -236,15 +237,13 @@ h2 {
 }
 
 .profile {
-    display: grid;
-    grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
-    gap: var(--space-xl);
-    align-items: start;
+    display: flow-root;
 }
 
 .profile__photo {
-    width: 100%;
-    margin: 0;
+    float: left;
+    width: min(18rem, 40%);
+    margin: 0 var(--space-xl) var(--space-md) 0;
     border-radius: var(--radius);
 }
 
@@ -619,7 +618,7 @@ h2 {
     background: var(--color-primary);
     border: 0.2rem solid var(--color-on-dark);
     border-radius: 50%;
-    box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0.25rem 0.8rem var(--color-shadow);
     font-weight: 800;
     cursor: pointer;
     transform: translate(-50%, -50%);
@@ -950,7 +949,7 @@ h2 {
     height: 1.5rem;
     border: 0.2rem solid var(--color-on-dark);
     border-radius: 50% 50% 50% 0;
-    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0.15rem 0.4rem var(--color-shadow);
     transform: rotate(-45deg);
 }
 
@@ -1008,13 +1007,10 @@ h2 {
     }
 
     .profile__photo {
+        float: none;
         width: 100%;
         max-width: 18rem;
         margin: 0 auto;
-    }
-
-    .profile {
-        grid-template-columns: 1fr;
     }
 
     .workspace__intro {
