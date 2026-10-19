@@ -17,10 +17,12 @@
 </head>
 <body>
 
+<!-- Odkaz umozni pouzivatelovi klavesnice preskocit navigaciu. -->
 <a class="skip-link" href="#main-content">
     Preskočiť na obsah
 </a>
 
+<!-- Spolocna hlavicka webovej vizitky. -->
 <header class="site-header">
     <div class="site-header__content">
         <a class="brand" href="../index.html" aria-label="Domovská stránka">
@@ -32,6 +34,7 @@
         </a>
     </div>
 </header>
+<!-- Atribut aria-current oznacuje aktualne otvorenu stranku. -->
 <nav class="site-navigation" aria-label="Hlavná navigácia">
     <button class="site-navigation__toggle" type="button" aria-controls="main-menu" aria-expanded="false">MENU</button>
     <ul class="site-navigation__list" id="main-menu">
@@ -53,10 +56,12 @@
     </ul>
 </nav>
 
+<!-- Zivotopis je rozdeleny na bocny panel a hlavny obsah. -->
 <main class="site-main" id="main-content">
     <h1>Môj životopis</h1>
     <article class="resume">
         <h2 class="visually-hidden">Životopis Andriiho Lazaresku</h2>
+        <!-- Bocny panel obsahuje fotografiu a kontaktne udaje. -->
         <aside class="resume__sidebar">
             <img class="resume__photo"
             src="../img/me.jpg"
@@ -75,6 +80,7 @@
             </section>
 
         </aside>
+        <!-- Hlavna cast obsahuje profil, vzdelanie a zrucnosti. -->
         <div class="resume__content">
             <section>
                 <h2>Profil</h2>
@@ -138,6 +144,7 @@
     </article>
 </main>
 
+<!-- Paticka sa pri tlaci skryje pomocou print.css. -->
 <footer class="site-footer">
     <div class="site-footer__content">
         <address class="contact">

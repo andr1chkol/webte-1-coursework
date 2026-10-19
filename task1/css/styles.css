@@ -1,3 +1,4 @@
+/* Lokalna typografia funguje aj bez pripojenia na internet. */
 @font-face {
     font-family: "Inter";
     src: url("../fonts/inter.woff2") format("woff2");
@@ -14,6 +15,7 @@
     font-display: swap;
 }
 
+/* Spolocne farby, rozmery a medzery pre cely web. */
 :root {
     --color-primary: #ef1a2d;
     --color-primary-dark: #a80f1d;
@@ -125,6 +127,7 @@ h2 {
     font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
+/* Hlavne casti stranky maju rovnaku maximalnu sirku. */
 .site-header__content,
 .site-navigation,
 .site-main,
@@ -229,6 +232,7 @@ h2 {
     padding-block: var(--space-xl);
 }
 
+/* Profilova karta a citat pouzivaju spolocny vzhlad povrchu. */
 .profile,
 .quote {
     padding: var(--space-lg);
@@ -305,6 +309,7 @@ h2 {
     background: var(--color-primary-dark);
 }
 
+/* Zivotopis ma bocny panel a hlavny obsah v dvoch stlpcoch. */
 .resume {
     display: grid;
     grid-template-columns: minmax(15rem, 1fr) minmax(0, 2fr);
@@ -353,6 +358,7 @@ h2 {
     border-bottom: 0.0625rem solid var(--color-border);
 }
 
+/* Rozvrh je tabulka s hodinami, filtrami a aktualnym stavom. */
 .schedule {
     padding: var(--space-lg);
     background: var(--color-surface);
@@ -401,6 +407,15 @@ h2 {
 .schedule__filter:hover {
     color: var(--color-on-dark);
     background: var(--color-primary-dark);
+}
+
+.schedule__filter:focus {
+    outline: none;
+}
+
+.schedule__filter:focus-visible {
+    outline: 0.15rem solid var(--color-primary-dark);
+    outline-offset: 0.15rem;
 }
 
 .schedule__table-wrapper {
@@ -509,6 +524,7 @@ h2 {
 
 .lesson--filtered {
     background: transparent;
+    box-shadow: none;
 }
 
 .lesson--filtered strong,
@@ -554,6 +570,7 @@ h2 {
     white-space: nowrap;
 }
 
+/* Pracovne prostredie pouziva radio tlacidla na vyber aktivneho bodu. */
 .workspace {
     padding: var(--space-lg);
     background: var(--color-surface);
@@ -716,6 +733,7 @@ h2 {
     letter-spacing: 0.12em;
 }
 
+/* Zobrazi sa iba panel priradeny k oznacenemu radio tlacidlu. */
 .workspace__interactive:has(.workspace__control--one:checked) .workspace__panel--one,
 .workspace__interactive:has(.workspace__control--two:checked) .workspace__panel--two,
 .workspace__interactive:has(.workspace__control--three:checked) .workspace__panel--three,
@@ -738,6 +756,7 @@ h2 {
     color: var(--color-primary);
 }
 
+/* Mapa je rozdelena na ovladaci panel a Leaflet mapu. */
 .map-section {
     padding: var(--space-lg);
     background: var(--color-surface);
@@ -961,6 +980,7 @@ h2 {
     background: var(--color-graphite);
 }
 
+/* Mobilne rozlozenie pre uzke obrazovky. */
 @media (max-width: 768px) {
     .resume {
         grid-template-columns: 1fr;
@@ -1063,6 +1083,7 @@ h2 {
 }
 
 
+/* Respektuje nastavenie obmedzenia animacii v operacnom systeme. */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

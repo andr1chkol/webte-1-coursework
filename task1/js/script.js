@@ -1,6 +1,8 @@
+// Zaciatok a koniec semestra sa pouzivaju na vypocet priebehu vyucby.
 const SEMESTER_START = new Date(2026, 8, 14);
 const SEMESTER_END = new Date(2026, 11, 14, 23, 59, 59);
 
+// Mobilne menu sa otvara tlacidlom a zaroven aktualizuje aria-expanded.
 const menuButton = document.querySelector(".site-navigation__toggle");
 const menu = document.querySelector(".site-navigation__list");
 
@@ -15,6 +17,7 @@ if (menuButton && menu) {
 const lessons = [...document.querySelectorAll(".lesson")];
 const scheduleStatus = document.querySelector("#schedule-status");
 
+// Cas vo formate HH:MM prevedie na pocet minut od polnoci.
 function timeToMinutes(time) {
     const [hours, minutes] = time.split(":").map(Number);
     return hours * 60 + minutes;
@@ -34,6 +37,7 @@ function updateCurrentLesson() {
     const day = now.getDay();
     const minutes = now.getHours() * 60 + now.getMinutes();
 
+    // Vyhlada hodinu, ktora prave prebieha v aktualny den a cas.
     const currentLesson = lessons.find((lesson) => {
         return Number(lesson.dataset.day) === day
             && minutes >= timeToMinutes(lesson.dataset.start)
@@ -49,6 +53,7 @@ function updateCurrentLesson() {
         return;
     }
 
+    // Pre kazdu hodinu vypocita pocet dni do jej najblizsieho zaciatku.
     const upcomingLessons = lessons.map((lesson) => {
         let daysAhead = Number(lesson.dataset.day) - day;
         if (daysAhead < 0 || (daysAhead === 0 && timeToMinutes(lesson.dataset.start) <= minutes)) {
@@ -71,6 +76,7 @@ function updateCurrentLesson() {
 const filterButtons = [...document.querySelectorAll(".schedule__filter")];
 const filterStatus = document.querySelector("#schedule-filter-status");
 
+// Filtre zobrazuju vsetky hodiny, iba prednasky alebo iba cvicenia.
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
         const selectedFilter = button.dataset.filter;
@@ -107,6 +113,7 @@ function updateSemesterProgress() {
 
     const elapsed = Date.now() - SEMESTER_START.getTime();
     const duration = SEMESTER_END.getTime() - SEMESTER_START.getTime();
+    // Hodnota je vzdy v rozsahu od 0 do 100 percent.
     const percentage = Math.min(100, Math.max(0, elapsed / duration * 100));
     const roundedPercentage = Math.round(percentage);
 
@@ -120,7 +127,9 @@ updateSemesterProgress();
 
 const mapElement = document.querySelector("#map");
 
+// Kod mapy sa spusti iba na stranke, kde existuje mapa a kniznica Leaflet.
 if (mapElement && window.L) {
+    // Tieto miesta su pevne a pouzivaju sa ako ciel pri merani vzdialenosti.
     const fixedPlaces = {
         school: {name: "FEI STU", address: "Ilkovičova 3, Bratislava", latitude: 48.151965, longitude: 17.072995},
         home: {name: "ŠD Mladosť", address: "Staré Grunty 53, Bratislava", latitude: 48.1595464, longitude: 17.0635858}
@@ -167,6 +176,7 @@ if (mapElement && window.L) {
 
     function loadSavedPlaces() {
         try {
+            // Pouzivatelske body sa nacitaju z localStorage a overi sa ich struktura.
             const storedPlaces = JSON.parse(localStorage.getItem(storageKey));
             if (!Array.isArray(storedPlaces)) return [];
             return storedPlaces.filter((place) => {
@@ -196,6 +206,7 @@ if (mapElement && window.L) {
     }
 
     function calculateDistance(start, end) {
+        // Haversinov vzorec vypocita vzdialenost medzi dvoma GPS bodmi.
         const earthRadius = 6371;
         const toRadians = (degrees) => degrees * Math.PI / 180;
         const latitudeDifference = toRadians(end.latitude - start.latitude);
@@ -259,6 +270,7 @@ if (mapElement && window.L) {
     }
 
     map.on("click", (event) => {
+        // Kliknutie do mapy pripravi novy bod a zobrazi formular s nazvom.
         pendingPoint = event.latlng;
         if (pendingMarker) pendingMarker.setLatLng(event.latlng);
         else pendingMarker = L.marker(event.latlng, {icon: customIcon}).addTo(map);
@@ -278,6 +290,7 @@ if (mapElement && window.L) {
             longitude: pendingPoint.lng
         };
         savedPlaces.push(place);
+        // Novy bod zostane ulozeny aj po obnoveni stranky.
         localStorage.setItem(storageKey, JSON.stringify(savedPlaces));
         cancelPendingPlace();
         renderSavedPlaces();

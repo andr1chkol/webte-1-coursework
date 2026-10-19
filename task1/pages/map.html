@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>те
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
@@ -19,10 +19,12 @@
 </head>
 <body>
 
+    <!-- Odkaz umozni pouzivatelovi klavesnice preskocit navigaciu. -->
     <a class="skip-link" href="#main-content">
         Preskočiť na obsah
     </a>
 
+    <!-- Spolocna hlavicka webovej vizitky. -->
     <header class="site-header">
         <div class="site-header__content">
             <a class="brand" href="../index.html" aria-label="Domovská stránka">
@@ -35,6 +37,7 @@
         </div>
     </header>
 
+    <!-- Hlavna navigacia medzi piatimi strankami projektu. -->
     <nav class="site-navigation" aria-label="Hlavná navigácia">
         <button class="site-navigation__toggle" type="button" aria-controls="main-menu" aria-expanded="false">MENU</button>
         <ul class="site-navigation__list" id="main-menu">
@@ -46,6 +49,7 @@
         </ul>
     </nav>
 
+    <!-- Interaktivna mapa je vytvorena pomocou kniznice Leaflet. -->
     <main class="site-main" id="main-content">
         <h1>Kde ma nájdete</h1>
 
@@ -66,7 +70,9 @@
                     </span>
                 </div>
             </div>
+            <!-- Rozlozenie spaja ovladaci panel so samotnou mapou. -->
             <div class="map-layout">
+                <!-- Do tohto elementu JavaScript vlozi Leaflet mapu. -->
                 <div id="map" class="map" role="application" aria-label="Interaktívna mapa Bratislavy"></div>
                 <aside class="map-panel" aria-label="Ovládanie mapy">
                     <div>
@@ -109,6 +115,7 @@
             <p class="map-sources">Mapa: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Knižnica: <a href="https://leafletjs.com/">Leaflet</a></p>
         </section>
     </main>
+    <!-- Paticka obsahuje kontakt a zdroje mapovych podkladov. -->
     <footer class="site-footer">
         <div class="site-footer__content">
             <address class="contact">
